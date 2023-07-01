@@ -1,5 +1,8 @@
 package backend.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Ellipse implements Figure {
 
     protected final Point centerPoint;
@@ -26,6 +29,13 @@ public class Ellipse implements Figure {
 
     public double getsMinorAxis() {
         return sMinorAxis;
+    }
+
+    @Override
+    public List<Point> getPoints(){
+         List<Point> toRet = new ArrayList<>();
+         toRet.add(centerPoint);
+         return toRet;
     }
 
 }
